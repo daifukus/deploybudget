@@ -1,0 +1,50 @@
+{
+  "name": "@dfklabs/deploybudget",
+  "version": "1.0.0",
+  "description": "Stop Vercel from burning your daily deployment limit on branches nobody looks at. Fixes \"Deployment rate limited \u2014 retry in 24 hours\".",
+  "type": "module",
+  "bin": {
+    "deploybudget": "./apply.mjs"
+  },
+  "scripts": {
+    "test": "node --test test/apply.test.mjs",
+    "verify": "node scripts/verify-release.mjs",
+    "prepublishOnly": "npm test && npm run verify"
+  },
+  "files": [
+    "apply.mjs",
+    "vercel.json",
+    "templates",
+    "README.md",
+    "LICENSE",
+    "NOTICE"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "vercel",
+    "deployment",
+    "rate-limit",
+    "quota",
+    "vercel-json",
+    "preview-deployments",
+    "ci"
+  ],
+  "author": {
+    "name": "dfklabs",
+    "url": "https://dfklabs.com"
+  },
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dfklabs/deploybudget.git"
+  },
+  "bugs": {
+    "url": "https://github.com/dfklabs/deploybudget/issues"
+  },
+  "homepage": "https://paneltir.dfklabs.com"
+}

@@ -1,0 +1,9 @@
+# Only the repository root — test/fixtures/monorepo/node_modules is a fixture
+# that proves --scan skips vendored directories, so it has to stay tracked.
+/node_modules/
+
+.DS_Store
+*.bak
+.vercel/
+npm-debug.log*
+*.tgz
